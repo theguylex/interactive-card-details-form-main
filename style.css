@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    /* border: 1px solid purple; */
+}
+
+.bodyA {
+    background: url("./images/bg-main-desktop.png") no-repeat center center/cover;
+    height: 100%;
+    width: 32.7%;
+    /* border: 1px solid black; */
+    
+}
+
+.bodyB {
+    background: white;
+    height: 100%;
+    width: 67.3%;
+    /* border: 1px solid red; */
+}
+
+.cards {
+    position: relative;
+    padding: 21.3% 0px;
+}
+
+.cardFront {
+    background: url("./images/bg-card-front.png") no-repeat center center/cover;
+    height: 245px;
+    width: 100%;
+    position: absolute;
+    /*top: 10%;*/
+    left: 20.4%;
+    /*z-index: 1;*/ 
+    /*border: 1px solid black;*/
+    border-radius: 12px;
+}
+
+.cardFrontContent {
+    padding: 30px 30px;
+}
+
+.cardNumber {
+    /* text-align: center; */
+    color: white;
+    font-size: 38px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nameExpDate {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardBack {
+    background: url("./images/bg-card-back.png") no-repeat center center/cover;
+    height: 245px;
+    width: 100%;
+    position: absolute;
+    top: 198%;
+    left: 41.4%;
+    /* z-index: 1; */
+    /* border: 1px solid black; */
+    border-radius: 12px;
+}
