@@ -32,7 +32,9 @@
         <div class="cards">
           <div class="cardFront">
             <div class="cardFrontContent">
-              <div class="cardFrontLogo"><img src="images/card-logo.svg" alt=""></div>
+              <div class="cardFrontLogo">
+                <img src="images/card-logo.svg" alt="" />
+              </div>
               <div class="cardNumber">0000 0000 0000 0000</div>
               <div class="nameExpDate">
                 <h5 class="cardName">JANE APPLESEED</h5>
@@ -44,36 +46,60 @@
         </div>
       </div>
 
-      <div class="bodyB"></div>
+      <div class="bodyB">
+        <div class="form-container">
+          <div class="form-group">
+            <label for="cardholder">CARDHOLDER NAME</label>
+            <input type="text" id="cardholder" placeholder="Enter Card Name" />
+          </div>
+          <div class="form-group">
+            <label for="cardnumber">CARD NUMBER</label>
+            <input
+              type="text"
+              id="cardnumber"
+              placeholder="Enter Card Number"
+              class="error"
+            />
+            <h4 class="error-msg">Wrong format, numbers only</h4>
+          </div>
+
+          <div class="dateCvc">
+            <div class="form-group">
+              <label>EXP. DATE (MM/YY)</label>
+              <div class="exp-date">
+                <div class="monthInput">
+                  <input type="text" placeholder="MM" class="error" />
+                  <h4 class="error-msg">Can't be blank</h4>
+                </div>
+                
+                <div class="yearInput">
+                  <input type="text" placeholder="YY" class="error" />
+                  <h4 class="error-msg">Can't be blank</h4>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              
+              <div class="cvc">
+                <label>CVC</label>
+                <input type="text" placeholder="e.g. 123" class="error" />
+              </div>
+              <h4 class="error-msg">Can't be blank</h4>
+            </div>
+          </div>
+
+          <button>Confirm</button>
+        </div>
+      </div>
     </div>
 
-    <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
+    <!-- 
 
   Confirm -->
 
     <!-- Completed state start -->
 
-    <!-- Thank you!
-  We've added your card details
-  Continue
-  
+    <!--   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
