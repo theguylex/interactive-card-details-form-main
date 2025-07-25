@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -16,31 +21,42 @@
     height: 100%;
     width: 32.7%;
     /* border: 1px solid black; */
-
 }
 
 .bodyB {
     background: white;
-    height: 100%;
+    /* height: 100%; */
     width: 67.3%;
     /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10% 45px; */
 }
 
 .cards {
-    position: relative;
-    padding: 21.3% 0;
+    /*position: relative;*/
+    padding-top: 21.3%;
     height: 100%;
-    /* border: 1px solid black; */
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    transform: translateX(140px);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .cardFront {
     background: url("./images/bg-card-front.png") no-repeat center center/cover;
     height: 245px;
     width: 447px;
-    position: absolute;
-    /*top: 10%;*/
-    left: 20.4%;
-    /*z-index: 1;*/
+    /* position: absolute; */
+    /* left: 20.4%; */
     /*border: 1px solid black;*/
     border-radius: 12px;
 }
@@ -69,12 +85,9 @@
     background: url("./images/bg-card-back.png") no-repeat center center/cover;
     height: 245px;
     width: 447px;
-    position: absolute;
-    top: 60%;
-    left: 41.4%;
-    /* z-index: 1; */
-    /* border: 1px solid black; */
+    /*border: 1px solid black;*/
     border-radius: 12px;
+    transform: translateX(85px);
 }
 
 .cardBackContent {
@@ -93,18 +106,13 @@
 }
 
 .form-container {
-    /*background-color: white;*/
-    /* padding: 50px 313px; */
-    padding-top: 50px;
-    padding-left: 313px;
-    padding-right: 224px;
+    padding: 20% 186px 20% 350px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    /* align-items: center; */
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .form-group {
@@ -147,7 +155,7 @@ input.error {
 
 .dateCvc {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     gap: 20px;
     /* border: 1px solid; */
     /* justify-content: space-between; */
@@ -160,18 +168,7 @@ input.error {
 }
 
 .exp-date input {
-    width: 79px;
-}
-
-.cvc {
-    display: flex;
-    flex-direction: column;
-    /* gap: 10px; */
-    margin-bottom: 2px;
-}
-
-.cvc input {
-    max-width: 100%;
+    /* width: 79px; */
 }
 
 button {
@@ -189,3 +186,141 @@ button {
 button:hover {
     background-color: #440a77;
 }
+
+/* Media Queries for responsiveness */
+
+/* Extra large screens */
+@media (min-width: 1920px) {}
+
+/* Desktops */
+@media (min-width:1200px) and (max-width:1919px) {
+    .form-container {
+        /* padding: 20% 275px 10% 100px; */
+        padding: 20% 90px 20% 350px;
+    }
+}
+
+/* Laptops/Large tablets */
+@media (min-width:992px) and (max-width:1199px) {
+    .cards {
+        padding-top: 21.3%;
+        height: 100%;
+        transform: translateX(60px);
+    }
+
+    .form-container {
+        /* padding: 20% 275px 10% 100px; */
+        padding: 20% 20px 20% 310px;
+    }
+}
+
+/* small tablets */
+@media (min-width:768px) and (max-width:991px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bodyA, .bodyB {
+        width: 100%;
+    }
+
+    .bodyA {
+        height: 30%;
+    }
+
+    .cards {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        padding-top: 21%;
+        height: 100%;
+        /* border: 1px solid black; */
+        translate: -15% 1%;
+    }
+
+    .card-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cardFront {
+        translate: -30% -52%;
+        z-index: 2;
+    }
+
+    .form-container {
+        padding: 20% 70px;
+    }
+}
+
+/* Extra small devices */
+@media (min-width:481px) and (max-width:767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bodyA, .bodyB {
+        width: 100%;
+    }
+
+    .bodyA {
+        height: 20%;
+    }
+
+    .cards {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        padding-top: 1%;
+        height: 100%;
+        /* border: 1px solid black; */
+        translate: -29% 25%;
+    }
+
+    .card-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cardFront {
+        translate: -30% -56%;
+        z-index: 2;
+    }
+
+    .cardFront, .cardBack {
+        height: 159px;
+        width: 287px;
+    }
+
+    .cardFrontContent {
+        padding: 20px;
+    }
+
+    .cardNumber {
+        color: white;
+        font-size: 24px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nameExpDate {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-top: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-container {
+        padding: 20% 70px;
+    }
+}
+
+/* Mobile */
+@media (min-width:320px) and (max-width:480px) {}
