@@ -323,4 +323,77 @@ button:hover {
 }
 
 /* Mobile */
-@media (min-width:320px) and (max-width:480px) {}
+@media (min-width:320px) and (max-width:480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bodyA, .bodyB {
+        width: 100%;
+    }
+
+    .bodyA {
+        height: 30%;
+    }
+
+    .cards {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        padding-top: 1%;
+        height: 100%;
+        /* border: 1px solid black; */
+        translate: -29% 25%;
+    }
+
+    .card-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cardFront {
+        translate: -30% -56%;
+        z-index: 2;
+    }
+
+    .cardFront, .cardBack {
+        /* height: 159px; */
+        /* width: 287px; */
+        height: 159px;
+        width: 245px;
+    }
+
+    .cardBack {
+        transform: translateX(-25px);
+}
+
+    .cardFrontContent {
+        padding: 20px;
+    }
+
+    .cardNumber {
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nameExpDate {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-top: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-container {
+        padding: 35% 10px;
+    }
+
+    .dateCvc {
+        gap: 10px;
+    }
+}
